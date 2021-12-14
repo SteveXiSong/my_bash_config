@@ -15,7 +15,6 @@ PS1="${BLUE}(${RED}\w${BLUE}) ${NORMAL}\h ${RED}\$ ${NORMAL}"
 #bash_profile
 unset USERNAME
 
-
 #use bash_completion
 #ubuntu : already exists
 #readhat: rpm -ivh http://www.caliban.org/files/redhat/RPMS/noarch/bash-completion-20060301-1.noarch.rpm
@@ -35,20 +34,6 @@ fi
 #export HISTSIZE=50000
 # Don't store duplicate lines in history
 export HISTCONTROL=ignoreboth
-# Apend to history instead of overwriting
-#shopt -s histappend
-# Unify histories across screen sessions
-PROMPT_COMMAND="$PROMPT_COMMAND;history -a; history -n"
-
-# local variables
-export PATH=/bin:/sbin:/usr/sbin:/usr/bin:/usr/local/bin:~/bin
-export LD_LIBRARY_PATH=/usr/local/lib:/usr/lib
-
-export CLASSPATH=$HADOOP_HOME/lib:$JAVA_HOME/lib:$JRE_HOME/lib
-
-export PATH=$PATH:$HADOOP_HOME/bin:$JAVA_HOME/bin:$JRE_HOME/bin:$HIVE_HOME
-export PYTHONPATH=$PYTHONPATH:/Users/SteveSong/.local/lib/python2.7/site-packages
-export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python2.7/site-packages
 
 #设置了Ls的目录颜色
 export HOSTSHORT=`hostname`
@@ -66,16 +51,6 @@ export SVN_EDITOR=vim
 PROMPT_COMMAND='echo -ne "\033]0;[${HOSTSHORT}:`basename $PWD`\$]${PWD}\007"'
 #PS1='[\u@\h:${YROOT_NAME}\w\$] '
 #PS1='[\u@Luna \w\$] '
-
-#.bashrc
-#if [ -f /etc/bashrc ]; then
-#        . /etc/bashrc
-#fi
-
-#.markrc
-if [ -f ~/.markrc ]; then
-        . ~/.markrc
-fi
 
 
 #all aliases
